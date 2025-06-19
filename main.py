@@ -97,7 +97,7 @@ def get_video_info(url: str) -> dict:
         'quiet': True,
         'no_warnings': True,
         'extract_flat': True,
-        'format': 'bv*[height<=480][height>=360][ext=mp4]+ba[ext=m4a]/b[height<=480][height>=360][ext=mp4]/b[height<=480][height>=360]',  # Target 360p-480p
+        'format': 'bv*[height=720][ext=mp4]+ba[ext=m4a]/b[height=720][ext=mp4]/b[height=720]/bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080][ext=mp4]/b[height<=1080]',
         'nocheckcertificate': True,
         'ignoreerrors': True,
         'no_color': True,
